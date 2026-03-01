@@ -1,24 +1,23 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Intern.hpp                                         :+:      :+:    :+:   */
+/*   Serializer.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/01 17:46:24 by marvin            #+#    #+#             */
-/*   Updated: 2026/03/01 17:46:25 by marvin           ###   ########.fr       */
+/*   Created: 2026/03/01 17:43:12 by marvin            #+#    #+#             */
+/*   Updated: 2026/03/01 17:43:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#ifndef	INTERN_HPP
-#define	INTERN_HPP
+#include "Serializer.hpp"
 
-#include <string>
-
-class AForm;
-class	Intern {
-    public:
-        AForm* makeForm(const std::string& formName, const std::string& target);
+uintptr_t Serializer::serialize(Data* ptr)
+{
+    return (reinterpret_cast<uintptr_t>(ptr));
 };
 
-#endif
+Data* Serializer::deserialize(uintptr_t raw)
+{
+    return(reinterpret_cast<Data*>(raw));
+};

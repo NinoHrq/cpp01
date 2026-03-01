@@ -1,7 +1,18 @@
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+/******************************************************************************/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/01 17:45:06 by marvin            #+#    #+#             */
+/*   Updated: 2026/03/01 18:07:59 by marvin           ###   ########.fr       */
+/*                                                                            */
+/******************************************************************************/
 
-Bureaucrat::Bureaucrat(){}
+#include "Bureaucrat.hpp"
+
+Bureaucrat::Bureaucrat() : name("Default"), grade(150) {}
 
 Bureaucrat::Bureaucrat(const std::string& s, int i) : name(s), grade(i)
 {
@@ -11,7 +22,7 @@ Bureaucrat::Bureaucrat(const std::string& s, int i) : name(s), grade(i)
 		throw GradeTooLowException();
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& other) {grade = other.grade;}
+Bureaucrat::Bureaucrat(const Bureaucrat& other)  : name(other.name), grade(other.grade) {}
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 {

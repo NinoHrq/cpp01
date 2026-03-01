@@ -1,24 +1,21 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Intern.hpp                                         :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/01 17:46:24 by marvin            #+#    #+#             */
-/*   Updated: 2026/03/01 17:46:25 by marvin           ###   ########.fr       */
+/*   Created: 2026/03/01 17:50:30 by marvin            #+#    #+#             */
+/*   Updated: 2026/03/01 19:47:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#ifndef	INTERN_HPP
-#define	INTERN_HPP
+#ifndef BASE_HPP
+# define BASE_HPP
 
-#include <string>
-
-class AForm;
-class	Intern {
-    public:
-        AForm* makeForm(const std::string& formName, const std::string& target);
+class Base {
+    public :
+        virtual ~Base();
 };
 
 #endif
