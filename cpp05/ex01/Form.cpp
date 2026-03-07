@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 17:45:24 by marvin            #+#    #+#             */
-/*   Updated: 2026/03/01 17:45:25 by marvin           ###   ########.fr       */
+/*   Updated: 2026/03/07 22:27:08 by marvin           ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -22,7 +22,7 @@ Form::Form(const std::string& s, int ts, int te) : name(s), _isSigned(false), gr
 {
 	if (ts < 1 || te < 1)
 		throw GradeTooHighException();
-	else if (ts > 150 || ts > 150)
+	else if (ts > 150 || te > 150)
 		throw GradeTooLowException();
     
 }
